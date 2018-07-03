@@ -1,0 +1,23 @@
+{
+  "name": "bug-findone",
+  "version": "1.0.0",
+  "description": "Bug reproduction repo for typeorm's find options",
+  "scripts": {
+    "start": "yarn db:setup && ts-node src/index.ts",
+    "db:create": "ts-node scripts/create-database.ts",
+    "db:migrate": "yarn db:typeorm migration:run",
+    "db:setup": "yarn db:create && yarn db:migrate",
+    "db:typeorm": "ts-node node_modules/.bin/typeorm"
+  },
+  "author": "mrnagydavid",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^10.5.1",
+    "@types/pg": "^7.4.10",
+    "@types/supertest": "^2.0.4",
+    "pg": "^7.4.3",
+    "ts-node": "^7.0.0",
+    "typeorm": "^0.2.7",
+    "typescript": "^2.9.2"
+  }
+}
